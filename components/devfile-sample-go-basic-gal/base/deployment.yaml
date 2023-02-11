@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-go-basic-gal
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-go-basic-gal
+    app.kubernetes.io/part-of: gal-app
+  name: devfile-sample-go-basic-gal
+  namespace: gbenhaim-tenant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: devfile-sample-go-basic-gal
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: devfile-sample-go-basic-gal
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload:gbenhaim-tenant-devfile-sample-go-basic-gal
+        imagePullPolicy: Always
+        name: container-image
+        resources: {}
+status: {}
