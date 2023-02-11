@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: devfile-sample-go-basic-gal
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:gbenhaim-tenant-devfile-sample-go-basic-gal
+      - image: quay.io/redhat-appstudio/user-workload@sha256:c16c8448448a43005029fab1a8c335ad9aea225b13f4d8badb41b54e328f48b3
         imagePullPolicy: Always
         name: container-image
         resources: {}
