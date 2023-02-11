@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-go-basic-gal
+  namespace: gbenhaim-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:c16c8448448a43005029fab1a8c335ad9aea225b13f4d8badb41b54e328f48b3
+        name: container-image
+        resources: {}
+status: {}
